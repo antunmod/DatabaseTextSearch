@@ -1,0 +1,39 @@
+<div class="centered">
+  <h1>Search movies</h1>
+  <form [formGroup]="searchForm" (submit)="onSubmit()">
+    <mat-form-field class="search-width">
+      <textarea matInput placeholder="Text" formControlName="text"></textarea>
+    </mat-form-field>
+    <button mat-raised-button="Search" type="submit" class="margin-left" [disabled]="searchForm.invalid">Search</button>
+    <p>
+      <mat-radio-group style="color: darkblue" (change)="changeOperator()">
+        <mat-radio-button value="1" [checked]="true" >AND</mat-radio-button>
+        <mat-radio-button value="2" style="margin-left: 10px">OR</mat-radio-button>
+      </mat-radio-group>
+    </p>
+    <mat-form-field class="medium-width">
+      <textarea rows="10" matInput formControlName="query"></textarea>
+    </mat-form-field>
+  </form>
+  <h3 style="margin-top: 20px" *ngIf="searched">Number of documents retrieved: {{numberOfDocuments}}</h3>
+  <div class="mat-elevation-z8" *ngIf="searched">
+    <table #table mat-table [dataSource]="dataSource" fxFill>
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let row" style="text-align: left"> {{row.title}} </td>
+      </ng-container>
+
+      <!-- Rank Column -->
+      <ng-container matColumnDef="rank">
+        <th mat-header-cell *matHeaderCellDef> Rank </th>
+        <td mat-cell *matCellDef="let row" style="text-align: left">  {{row.rank}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator showFirstLastButtons></mat-paginator>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.centered {
+  text-align: center;
+}
+
+.search-width {
+  margin-left: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+.medium-width{
+  margin-left: 10px;
+  width: 80%;
+  border: solid 1px grey;
+}
+
+table {
+  width: 100%;
+}
+

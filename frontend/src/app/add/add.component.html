@@ -1,0 +1,20 @@
+<div class="centered">
+  <h1>Add a new movie</h1>
+  <form [formGroup]="movieForm" (submit)="onSubmit()">
+    <mat-form-field class="medium-width">
+      <textarea matInput placeholder="Title" formControlName="title"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="medium-width">
+      <textarea matInput placeholder="Category" formControlName="categories"></textarea>
+    </mat-form-field>
+    <mat-form-field class="medium-width">
+      <textarea matInput rows="2" placeholder="Summary" formControlName="summary"></textarea>
+    </mat-form-field>
+    <mat-form-field class="medium-width">
+      <textarea matInput rows="3" placeholder="Description" formControlName="description"></textarea>
+    </mat-form-field>
+    <br>
+    <button type="submit" [disabled]="!movieForm.valid" mat-raised-button="Add" class="centered-button">Add</button>
+  </form>
+</div>

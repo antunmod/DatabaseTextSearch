@@ -1,0 +1,9 @@
+.centered {
+  text-align: center;
+}
+
+.medium-width {
+  margin-left: 10px;
+  width: 90%;
+  text-align: center;
+}

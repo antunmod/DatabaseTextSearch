@@ -1,0 +1,16 @@
+INSERT INTO CATEGORY(id, name) VALUES (1, 'Action');
+INSERT INTO CATEGORY(id, name) VALUES (2, 'Drama');
+INSERT INTO CATEGORY(id, name) VALUES (3, 'Music');
+INSERT INTO CATEGORY(id, name) VALUES (4, 'Horror');
+INSERT INTO CATEGORY(id, name) VALUES (5, 'Documentary');
+INSERT INTO CATEGORY(id, name) VALUES (6, 'Family');
+INSERT INTO CATEGORY(id, name) VALUES (7, 'Children');
+INSERT INTO CATEGORY(id, name) VALUES (8, 'Foreign');
+INSERT INTO CATEGORY(id, name) VALUES (9, 'Comedy');
+INSERT INTO CATEGORY(id, name) VALUES (10, 'Sports');
+INSERT INTO CATEGORY(id, name) VALUES (11, 'Classics');
+INSERT INTO CATEGORY(id, name) VALUES (12, 'Animation');
+INSERT INTO CATEGORY(id, name) VALUES (13, 'New');
+INSERT INTO CATEGORY(id, name) VALUES (14, 'Sci-Fi');
+INSERT INTO CATEGORY(id, name) VALUES (15, 'Travel');
+INSERT INTO CATEGORY(id, name) VALUES (16, 'Games');
